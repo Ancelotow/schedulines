@@ -16,4 +16,8 @@ class StopScheduling {
     required this.departureAt,
     required this.arrivalStatus
   });
+
+  int arrivedIn(DateTime date) {
+    return arrivalAt.difference(date).inMinutes;
+  }
 }

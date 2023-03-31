@@ -11,7 +11,7 @@ final locator = GetIt.instance;
 Future<void> initializeDependencies() async {
 
   final dio = Dio();
-  dio.interceptors.add(AwesomeDioInterceptor());
+  //dio.interceptors.add(AwesomeDioInterceptor());
 
   locator.registerSingleton<Dio>(dio);
 
