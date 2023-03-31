@@ -8,7 +8,7 @@ class SiriResponse {
   factory SiriResponse.fromJson(Map<String, dynamic> json) {
     return SiriResponse(
       serviceDelivery:
-          ServiceDeliveryResponse.fromJson(json["ServiceDelivery"]),
+          ServiceDeliveryResponse.fromJson(json["Siri"]["ServiceDelivery"]),
     );
   }
 }

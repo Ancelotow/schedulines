@@ -20,12 +20,12 @@ class MonitoredCallResponse {
   });
 
   factory MonitoredCallResponse.fromJson(Map<String, dynamic> json) {
-    final destinations = json["DestinationDisplay"] as Map<String, dynamic>;
-    final stopsPoints = json["StopPointName"] as Map<String, dynamic>;
+    final destinations = json["DestinationDisplay"] as List;
+    final stopsPoints = json["StopPointName"] as List;
     return MonitoredCallResponse(
-      destinationDisplays: destinations.values.toList() as List<String>,
-      stopsPointsNames: stopsPoints.values.toList() as List<String>,
-      vehicleAtStop: json["VehicleAtStop"]?.toLowerCase() == "true",
+      destinationDisplays: destinations.map((e) => e["value"] as String).toList(),
+      stopsPointsNames: stopsPoints.map((e) => e["value"] as String).toList(),
+      vehicleAtStop: json["VehicleAtStop"],
       expectedArrivalTime: DateTime.parse(json["ExpectedArrivalTime"]),
       expectedDepartureTime: DateTime.parse(json["ExpectedDepartureTime"]),
       departureStatus: json["DepartureStatus"],

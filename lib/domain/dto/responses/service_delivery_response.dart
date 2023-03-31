@@ -19,7 +19,7 @@ class ServiceDeliveryResponse {
       producerRef: json["ProducerRef"],
       reponseMessageIdentifier: json["ResponseMessageIdentifier"],
       stopMonitoringDelivery: StopMonitoringDeliveryResponse.fromJson(
-          json["StopMonitoringDelivery"]),
+          json["StopMonitoringDelivery"][0]),
     );
   }
 }

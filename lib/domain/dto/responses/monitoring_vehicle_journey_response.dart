@@ -22,18 +22,18 @@ class MonitoredVehicleJourneyResponse {
   });
 
   factory MonitoredVehicleJourneyResponse.fromJson(Map<String, dynamic> json) {
-    final directions = json["DirectionName"] as Map<String, dynamic>;
-    final destinations = json["DestinationName"] as Map<String, dynamic>;
-    final vehicles = json["VehicleJourneyName"] as Map<String, dynamic>;
-    final notes = json["JourneyNote"] as Map<String, dynamic>;
+    final directions = json["DirectionName"] as List;
+    final destinations = json["DestinationName"] as List;
+    final vehicles = json["VehicleJourneyName"] as List;
+    final notes = json["JourneyNote"] as List;
     return MonitoredVehicleJourneyResponse(
       lineRef: json["LineRef"]?["value"] ?? "unknow",
       operatorRef: json["OperatorRef"]?["value"] ?? "unknow",
-      directionsNames: directions.values.toList() as List<String>,
+      directionsNames: directions.map((e) => e["value"] as String).toList(),
       destinationRef: json["DestinationRef"]?["value"] ?? "unknow",
-      destinationsNames: destinations.values.toList() as List<String>,
-      vehiclesJourneyNames: vehicles.values.toList() as List<String>,
-      journeyNotes: notes.values.toList() as List<String>,
+      destinationsNames: destinations.map((e) => e["value"] as String).toList(),
+      vehiclesJourneyNames: vehicles.map((e) => e["value"] as String).toList(),
+      journeyNotes: notes.map((e) => e["value"] as String).toList(),
       monitoredCall: MonitoredCallResponse.fromJson(json["MonitoredCall"]),
     );
   }

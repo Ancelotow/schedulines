@@ -1,0 +1,31 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:t_paris/domain/mappers/stop_scheduling_mapper.dart';
+import 'package:t_paris/domain/repositories/transport_scheduling_repository.dart';
+import 'package:t_paris/ui/cubits/states/transport_scheduling_state.dart';
+import 'package:t_paris/utils/data_state.dart';
+
+class TransportSchedulingCubit extends Cubit<TransportSchedulingState> {
+  final TransportSchedulingRepository _repository;
+  String lineRef = "STIF:Line::C01742:";
+  String monitoringRef = "STIF:StopPoint:Q:473921:";
+
+  TransportSchedulingCubit(this._repository)
+      : super(const TransportSchedulingStateLoading()) {
+    getSchedulingStop();
+  }
+  
+  void getSchedulingStop() async {
+    try {
+      emit(const TransportSchedulingStateLoading());
+      final siriResponse = await _repository.getStopScheduling(lineRef: lineRef, monitoringRef: monitoringRef);
+      if(siriResponse is DataStateSuccess) {
+        final stops = StopSchedulingMapper.fromSiriResponse(siriResponse.data!);
+        emit(TransportSchedulingStateSuccess(stops));
+      } else if (siriResponse is DataStateError) {
+        emit(TransportSchedulingStateError(siriResponse.error as Error));
+      }
+    } on Error catch (e) {
+      emit(TransportSchedulingStateError(e));
+    }
+  }
+}
