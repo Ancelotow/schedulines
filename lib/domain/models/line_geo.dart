@@ -13,4 +13,13 @@ class LineGeo {
     required this.mode,
     required this.color,
   });
+
+  Polyline toPolyline(){
+    return Polyline(
+      polylineId: PolylineId(line),
+      color: color,
+      points: coordinates,
+      width: 3,
+    );
+  }
 }

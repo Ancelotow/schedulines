@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:t_paris/config/routes/app_router.dart';
-import 'package:t_paris/data/repositories/api/transport_scheduling_api_repository.dart';
 import 'package:t_paris/domain/repositories/transport_scheduling_repository.dart';
-import 'package:t_paris/ui/cubits/transport_scheduling_cubit.dart';
-
+import 'package:t_paris/ui/cubits/transport_map_cubit.dart';
 import 'config/themes/theme.dart';
+import 'domain/repositories/transport_map_repository.dart';
 import 'helpers/locator.dart';
 
 Future<void> main() async {
@@ -25,9 +24,9 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => TransportSchedulingCubit(
-            locator<TransportSchedulingRepository>(),
-          )..getSchedulingStop(),
+          create: (context) => TransportMapCubit(
+            locator<TransportMapRepository>(),
+          )..getLinesOnMaps(),
         )
       ],
       child: MaterialApp.router(

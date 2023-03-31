@@ -17,24 +17,25 @@ class WidgetError extends StatelessWidget {
           size: 30,
         ),
         Text(
-          "Une erreur est survenue",
+          "Une erreur est survenue:\n${exception.toString()}",
           textAlign: TextAlign.center,
-          style: _getTextStyleError(context),
+          style: TextStyle(
+            color: Theme.of(context).errorColor,
+            fontSize: 12.0,
+            fontWeight: FontWeight.bold,
+          ),
         ),
+        const SizedBox(height: 20),
         Text(
           exception.stackTrace.toString(),
-          textAlign: TextAlign.center,
-          style: _getTextStyleError(context),
-        )
+          textAlign: TextAlign.left,
+          style: TextStyle(
+            color: Theme.of(context).errorColor,
+            fontSize: 10.0,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ],
-    );
-  }
-
-  TextStyle _getTextStyleError(BuildContext context) {
-    return TextStyle(
-      color: Theme.of(context).errorColor,
-      fontSize: 12.0,
-      fontWeight: FontWeight.bold,
     );
   }
 }
