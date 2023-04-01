@@ -55,6 +55,7 @@ flutter:
 
   assets:
     - assets/geo/lines.geojson
+    - assets/json/stops.json
     - assets/icons/on_cancel.svg
     - assets/icons/on_late.svg
     - assets/icons/on_time.svg

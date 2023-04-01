@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:t_paris/ui/views/transport_scheduling_page.dart';
+import 'package:t_paris/ui/views/landing_page/landing_page.dart';
 
 part 'app_router.gr.dart';
 

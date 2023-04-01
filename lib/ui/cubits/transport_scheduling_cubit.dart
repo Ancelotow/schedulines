@@ -6,7 +6,7 @@ import 'package:t_paris/utils/data_state.dart';
 
 class TransportSchedulingCubit extends Cubit<TransportSchedulingState> {
   final TransportSchedulingRepository _repository;
-  String lineRef = "STIF:Line::C01742:";
+  String lineRef = "STIF:Line::C01742:"; /// TODO: A supprimer (ne servira à rien, le monitoring suffit)
   String monitoringRef = "STIF:StopPoint:Q:473921:";
 
   TransportSchedulingCubit(this._repository)
