@@ -21,6 +21,8 @@ class _TransportSchedulingPageState extends State<TransportSchedulingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
+
       body: Stack(
         alignment: AlignmentDirectional.centerEnd,
         children: [

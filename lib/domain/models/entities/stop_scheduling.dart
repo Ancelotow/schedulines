@@ -4,11 +4,13 @@ class StopScheduling {
   final String destination;
   final String direction;
   final String transportRef;
-  final DateTime arrivalAt;
+  final String operatorRef;
+  final DateTime? arrivalAt;
   final DateTime departureAt;
   final ArrivalStatus arrivalStatus;
 
   StopScheduling({
+    required this.operatorRef,
     required this.destination,
     required this.direction,
     required this.transportRef,
@@ -18,6 +20,6 @@ class StopScheduling {
   });
 
   int arrivedIn(DateTime date) {
-    return arrivalAt.difference(date).inMinutes;
+    return departureAt.difference(date).inMinutes;
   }
 }

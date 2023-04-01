@@ -21,15 +21,9 @@ class _TransportSchedulingApiService implements TransportSchedulingApiService {
   String? baseUrl;
 
   @override
-  Future<HttpResponse<SiriResponse>> getStopScheduling(
-    monitoringRef,
-    lineRef,
-  ) async {
+  Future<HttpResponse<SiriResponse>> getStopScheduling(monitoringRef) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'MonitoringRef': monitoringRef,
-      r'LineRef': lineRef,
-    };
+    final queryParameters = <String, dynamic>{r'MonitoringRef': monitoringRef};
     final _headers = <String, dynamic>{
       r'apiKey': 'pjB7qiNhlBHc6RHsozpGdeUN1TjjU4db'
     };

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:t_paris/config/routes/app_router.dart';
+import 'package:t_paris/domain/repositories/transport_scheduling_repository.dart';
 import 'package:t_paris/domain/repositories/transport_stop_repository.dart';
 import 'package:t_paris/ui/cubits/transport_map_cubit.dart';
+import 'package:t_paris/ui/cubits/transport_scheduling_cubit.dart';
 import 'package:t_paris/ui/cubits/transport_stop_cubit.dart';
 import 'config/themes/theme.dart';
 import 'domain/repositories/transport_map_repository.dart';
@@ -33,6 +35,11 @@ class MyApp extends StatelessWidget {
           create: (context) => TransportStopCubit(
             locator<TransportStopRepository>(),
           )..getAllStops(),
+        ),
+        BlocProvider(
+          create: (context) => TransportSchedulingCubit(
+            locator<TransportSchedulingRepository>(),
+          )..getSchedulingStop(),
         ),
       ],
       child: MaterialApp.router(

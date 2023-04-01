@@ -6,7 +6,6 @@ import 'package:t_paris/utils/data_state.dart';
 
 class TransportSchedulingCubit extends Cubit<TransportSchedulingState> {
   final TransportSchedulingRepository _repository;
-  String lineRef = "STIF:Line::C01742:"; /// TODO: A supprimer (ne servira à rien, le monitoring suffit)
   String monitoringRef = "STIF:StopPoint:Q:473921:";
 
   TransportSchedulingCubit(this._repository)
@@ -17,7 +16,7 @@ class TransportSchedulingCubit extends Cubit<TransportSchedulingState> {
   void getSchedulingStop() async {
     try {
       emit(const TransportSchedulingStateLoading());
-      final siriResponse = await _repository.getStopScheduling(lineRef: lineRef, monitoringRef: monitoringRef);
+      final siriResponse = await _repository.getStopScheduling(monitoringRef: monitoringRef);
       if(siriResponse is DataStateSuccess) {
         final stops = StopSchedulingMapper.fromSiriResponse(siriResponse.data!);
         emit(TransportSchedulingStateSuccess(stops));

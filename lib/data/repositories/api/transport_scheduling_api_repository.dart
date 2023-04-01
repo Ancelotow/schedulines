@@ -12,11 +12,10 @@ class TransportSchedulingApiRepository implements TransportSchedulingRepository 
 
   @override
   Future<DataState<SiriResponse>> getStopScheduling({
-    required String lineRef,
     required String monitoringRef,
   }) async {
     try{
-      final httpResponse = await _service.getStopScheduling(monitoringRef, lineRef);
+      final httpResponse = await _service.getStopScheduling(monitoringRef);
       if(httpResponse.response.statusCode == HttpStatus.ok) {
         return DataStateSuccess(httpResponse.data);
       } else {

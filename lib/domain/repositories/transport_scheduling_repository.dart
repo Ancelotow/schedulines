@@ -3,7 +3,6 @@ import 'package:t_paris/utils/data_state.dart';
 
 abstract class TransportSchedulingRepository {
   Future<DataState<SiriResponse>> getStopScheduling({
-    required String lineRef,
     required String monitoringRef,
   });
 }

@@ -14,7 +14,6 @@ abstract class TransportSchedulingApiService {
     "apiKey" : "pjB7qiNhlBHc6RHsozpGdeUN1TjjU4db"
   })
   Future<HttpResponse<SiriResponse>> getStopScheduling(
-    @Query("MonitoringRef") String monitoringRef,
-    @Query("LineRef") String lineRef,
+    @Query("MonitoringRef") String monitoringRef
   );
 }

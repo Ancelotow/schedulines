@@ -10,9 +10,14 @@ abstract class StopSchedulingMapper {
     for (var element in monitoredStopVisits) {
       final vehicleJourney = element.monitoredVehicleJourney;
       stops.add(StopScheduling(
+        operatorRef: vehicleJourney.operatorRef,
         destination: vehicleJourney.destinationsNames[0],
-        direction: vehicleJourney.directionsNames[0],
-        transportRef: vehicleJourney.vehiclesJourneyNames[0],
+        direction: vehicleJourney.directionsNames.isEmpty
+            ? ""
+            : vehicleJourney.directionsNames.first,
+        transportRef: vehicleJourney.vehiclesJourneyNames.isEmpty
+            ? ""
+            : vehicleJourney.vehiclesJourneyNames.first,
         arrivalAt: vehicleJourney.monitoredCall.expectedArrivalTime,
         departureAt: vehicleJourney.monitoredCall.expectedDepartureTime,
         arrivalStatus: ArrivalStatusMapper.fromString(

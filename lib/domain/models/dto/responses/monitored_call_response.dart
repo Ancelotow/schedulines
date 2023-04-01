@@ -4,7 +4,7 @@ class MonitoredCallResponse {
   final List<String> stopsPointsNames;
   final bool vehicleAtStop;
   final List<String> destinationDisplays;
-  final DateTime expectedArrivalTime;
+  final DateTime? expectedArrivalTime;
   final DateTime expectedDepartureTime;
   final String departureStatus;
   final String arrivalStatus;
@@ -23,11 +23,16 @@ class MonitoredCallResponse {
     final destinations = json["DestinationDisplay"] as List;
     final stopsPoints = json["StopPointName"] as List;
     return MonitoredCallResponse(
-      destinationDisplays: destinations.map((e) => e["value"] as String).toList(),
+      destinationDisplays:
+          destinations.map((e) => e["value"] as String).toList(),
       stopsPointsNames: stopsPoints.map((e) => e["value"] as String).toList(),
       vehicleAtStop: json["VehicleAtStop"],
-      expectedArrivalTime: DateTime.parse(json["ExpectedArrivalTime"]),
-      expectedDepartureTime: DateTime.parse(json["ExpectedDepartureTime"]),
+      expectedArrivalTime: json["ExpectedArrivalTime"] != null
+          ? DateTime.parse(json["ExpectedArrivalTime"])
+          : null,
+      expectedDepartureTime: json["ExpectedDepartureTime"] != null
+          ? DateTime.parse(json["ExpectedDepartureTime"])
+          : DateTime.now(),
       departureStatus: json["DepartureStatus"],
       arrivalStatus: json["ArrivalStatus"],
     );
