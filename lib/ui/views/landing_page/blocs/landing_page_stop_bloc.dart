@@ -24,7 +24,7 @@ class LandingPageStopBloc extends StatelessWidget {
           case TransportStopStateError:
             return Center(child: WidgetError(exception: state.error!));
           case TransportStopStateSuccess:
-            return _getCard(state.data!.firstWhere((e) => e.idRef == "71370"));
+            return _getCard(state.data!.firstWhere((e) => e.idRef == "73798"));
           default:
             return const SizedBox();
         }
@@ -56,6 +56,7 @@ class LandingPageStopBloc extends StatelessWidget {
             ),
           ),
           TransportAvailableDisplayer(stop: stop),
+          const SizedBox(height: 20)
         ],
       ),
     );

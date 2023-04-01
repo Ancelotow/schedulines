@@ -1,27 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 311.8 311.8" style="enable-background:new 0 0 311.8 311.8;" xml:space="preserve">
-<style type="text/css">
-	.st0{clip-path:url(#SVGID_00000120556867550239759900000001260399150671704714_);fill:#FFFFFF;}
-	.st1{clip-path:url(#SVGID_00000120556867550239759900000001260399150671704714_);}
-	.st2{clip-path:url(#SVGID_00000120556867550239759900000001260399150671704714_);fill:#0055C8;}
-</style>
-<g>
+<svg id="tram_T1_carto_RVB" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="311.8" height="311.8" viewBox="0 0 311.8 311.8">
 	<defs>
-		<rect id="SVGID_1_" width="311.8" height="311.8"/>
+		<clipPath id="clip-path">
+			<rect id="Rectangle_6" data-name="Rectangle 6" width="311.8" height="311.8"/>
+		</clipPath>
 	</defs>
-	<clipPath id="SVGID_00000111874596619261073640000006068421586231642008_">
-		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-	</clipPath>
-	<path style="clip-path:url(#SVGID_00000111874596619261073640000006068421586231642008_);fill:#FFFFFF;" d="M28.3,311.8
-		C12.7,311.8,0,299.1,0,283.5V28.3C0,12.7,12.7,0,28.3,0h255.1c15.6,0,28.3,12.7,28.3,28.3v255.1c0,15.6-12.7,28.3-28.3,28.3H28.3z"
-		/>
-	<path style="clip-path:url(#SVGID_00000111874596619261073640000006068421586231642008_);" d="M129.2,122.3v89.6H105v-89.6H71.5
-		v-19.6h91.3v19.6H129.2z M217.1,211.9V126c-6.6,5.3-17.2,10.4-24.4,13.6l-7.4-16.7c11.4-4.8,25.2-12.1,36-20.3h19v109.2H217.1z"/>
-	<path style="clip-path:url(#SVGID_00000111874596619261073640000006068421586231642008_);fill:#0055C8;" d="M283.5,57.4H28.3
-		c-7.8,0-14.2-6.3-14.2-14.2V29.1c0-7.8,6.3-14.2,14.2-14.2h255.1c7.8,0,14.2,6.3,14.2,14.2v14.2C297.6,51.1,291.3,57.4,283.5,57.4
-		 M297.6,284.2V270c0-7.8-6.3-14.2-14.2-14.2H28.3c-7.8,0-14.2,6.3-14.2,14.2v14.2c0,7.8,6.3,14.2,14.2,14.2h255.1
-		C291.3,298.4,297.6,292,297.6,284.2"/>
-</g>
+	<g id="Groupe_17" data-name="Groupe 17" clip-path="url(#clip-path)">
+		<path id="Tracé_19" data-name="Tracé 19" d="M28.3,311.8A28.338,28.338,0,0,1,0,283.5V28.3A28.338,28.338,0,0,1,28.3,0H283.4a28.338,28.338,0,0,1,28.3,28.3V283.4a28.338,28.338,0,0,1-28.3,28.3H28.3Z" fill="#fff"/>
+	</g>
+	<g id="Groupe_18" data-name="Groupe 18" clip-path="url(#clip-path)">
+		<path id="Tracé_20" data-name="Tracé 20" d="M129.2,122.3v89.6H105V122.3H71.5V102.7h91.3v19.6H129.2Zm87.9,89.6V126c-6.6,5.3-17.2,10.4-24.4,13.6l-7.4-16.7c11.4-4.8,25.2-12.1,36-20.3h19V211.8H217.1Z"/>
+	</g>
+	<g id="Groupe_19" data-name="Groupe 19" clip-path="url(#clip-path)">
+		<path id="Tracé_21" data-name="Tracé 21" d="M283.5,57.4H28.3A14.19,14.19,0,0,1,14.1,43.2V29.1A14.19,14.19,0,0,1,28.3,14.9H283.4a14.19,14.19,0,0,1,14.2,14.2V43.3a14.084,14.084,0,0,1-14.1,14.1m14.1,226.8V270a14.19,14.19,0,0,0-14.2-14.2H28.3A14.19,14.19,0,0,0,14.1,270v14.2a14.19,14.19,0,0,0,14.2,14.2H283.4a14.19,14.19,0,0,0,14.2-14.2" fill="#0055c8"/>
+	</g>
 </svg>

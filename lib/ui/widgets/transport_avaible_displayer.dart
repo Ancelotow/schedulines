@@ -28,6 +28,10 @@ class TransportAvailableDisplayer extends StatelessWidget {
       _symbols.add(const SizedBox(width: 15));
       _buildTrain();
     }
+    if (stop.modes.where((e) => e.toUpperCase().trim() == "TRAMWAY").isNotEmpty) {
+      _symbols.add(const SizedBox(width: 15));
+      _buildTram();
+    }
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: _symbols,
@@ -83,6 +87,15 @@ class TransportAvailableDisplayer extends StatelessWidget {
     for (var rer in rers) {
       final line = rer.replaceAll("TRAIN", "").trim();
       _addSymboleWithoutColor("assets/icons/train/train_${line}_couleur_RVB.svg");
+    }
+  }
+
+  void _buildTram() {
+    _addSymbole("assets/icons/symbole_tram.svg");
+    final rers = stop.lines.where((e) => e.contains("TRAM")).toList();
+    for (var rer in rers) {
+      final line = rer.replaceAll("TRAM", "").trim();
+      _addSymboleWithoutColor("assets/icons/tram/tram_T${line}_carto_RVB.svg");
     }
   }
 }
