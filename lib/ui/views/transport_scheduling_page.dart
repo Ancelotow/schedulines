@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:t_paris/ui/cubits/states/transport_scheduling_state.dart';
 import '../cubits/states/transport_map_state.dart';
 import '../cubits/transport_map_cubit.dart';
 import '../widgets/error.dart';
@@ -34,6 +33,9 @@ class _TransportSchedulingPageState extends State<TransportSchedulingPage> {
                   target: LatLng(48.866667, 2.333333),
                   zoom: 13.0,
                 ),
+                compassEnabled: true,
+                myLocationEnabled: true,
+                myLocationButtonEnabled: true,
                 mapType: MapType.normal,
                 polylines: state.data!
                     .where((e) =>
