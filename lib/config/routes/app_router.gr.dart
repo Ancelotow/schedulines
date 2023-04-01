@@ -18,11 +18,9 @@ class _$AppRouter extends RootStackRouter {
   @override
   final Map<String, PageFactory> pagesMap = {
     TransportSchedulingRoute.name: (routeData) {
-      final args = routeData.argsAs<TransportSchedulingRouteArgs>(
-          orElse: () => const TransportSchedulingRouteArgs());
       return AdaptivePage<dynamic>(
         routeData: routeData,
-        child: TransportSchedulingPage(key: args.key),
+        child: const TransportSchedulingPage(),
       );
     }
   };
@@ -38,25 +36,12 @@ class _$AppRouter extends RootStackRouter {
 
 /// generated route for
 /// [TransportSchedulingPage]
-class TransportSchedulingRoute
-    extends PageRouteInfo<TransportSchedulingRouteArgs> {
-  TransportSchedulingRoute({Key? key})
+class TransportSchedulingRoute extends PageRouteInfo<void> {
+  const TransportSchedulingRoute()
       : super(
           TransportSchedulingRoute.name,
           path: '/',
-          args: TransportSchedulingRouteArgs(key: key),
         );
 
   static const String name = 'TransportSchedulingRoute';
-}
-
-class TransportSchedulingRouteArgs {
-  const TransportSchedulingRouteArgs({this.key});
-
-  final Key? key;
-
-  @override
-  String toString() {
-    return 'TransportSchedulingRouteArgs{key: $key}';
-  }
 }

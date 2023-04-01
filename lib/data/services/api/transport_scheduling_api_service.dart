@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart' hide Headers;
 import 'package:retrofit/retrofit.dart';
-import '../../../domain/dto/responses/siri_response.dart';
+import 'package:t_paris/domain/models/dto/responses/siri_response.dart';
 
 part 'transport_scheduling_api_service.g.dart';
 

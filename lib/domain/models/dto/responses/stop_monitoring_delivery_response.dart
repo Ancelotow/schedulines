@@ -1,4 +1,4 @@
-import 'package:t_paris/domain/dto/responses/monitored_stop_visit_response.dart';
+import 'package:t_paris/domain/models/dto/responses/monitored_stop_visit_response.dart';
 
 class StopMonitoringDeliveryResponse {
   final DateTime responseTimestamp;

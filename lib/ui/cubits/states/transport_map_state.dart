@@ -1,4 +1,4 @@
-import 'package:t_paris/domain/models/line_geo.dart';
+import 'package:t_paris/domain/models/entities/line_geo.dart';
 
 abstract class TransportMapState {
   final List<LineGeo>? data;

@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:t_paris/domain/mappers/stop_scheduling_mapper.dart';
+import 'package:t_paris/domain/models/mappers/stop_scheduling_mapper.dart';
 import 'package:t_paris/domain/repositories/transport_scheduling_repository.dart';
 import 'package:t_paris/ui/cubits/states/transport_scheduling_state.dart';
 import 'package:t_paris/utils/data_state.dart';

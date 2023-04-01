@@ -1,4 +1,4 @@
-import 'package:t_paris/domain/dto/responses/monitoring_vehicle_journey_response.dart';
+import 'package:t_paris/domain/models/dto/responses/monitoring_vehicle_journey_response.dart';
 
 class MonitoredStopVisitResponse {
   final DateTime recordedAtTime;

@@ -1,4 +1,4 @@
-import 'package:t_paris/domain/dto/responses/stop_monitoring_delivery_response.dart';
+import 'package:t_paris/domain/models/dto/responses/stop_monitoring_delivery_response.dart';
 
 class ServiceDeliveryResponse {
   final DateTime responseTimestamp;

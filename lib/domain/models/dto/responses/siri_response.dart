@@ -1,4 +1,4 @@
-import 'package:t_paris/domain/dto/responses/service_delivery_response.dart';
+import 'package:t_paris/domain/models/dto/responses/service_delivery_response.dart';
 
 class SiriResponse {
   final ServiceDeliveryResponse serviceDelivery;

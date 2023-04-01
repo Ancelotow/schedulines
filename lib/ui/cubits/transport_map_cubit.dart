@@ -1,8 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:t_paris/domain/models/line_geo.dart';
+import 'package:t_paris/domain/models/adapter/line_geo_adapter.dart';
+import 'package:t_paris/domain/models/entities/line_geo.dart';
 import 'package:t_paris/ui/cubits/states/transport_map_state.dart';
-
-import '../../domain/adapter/line_geo_adapter.dart';
 import '../../domain/repositories/transport_map_repository.dart';
 import '../../utils/data_state.dart';
 

@@ -1,7 +1,7 @@
 import 'dart:io' show HttpStatus;
 import 'package:dio/dio.dart';
 import 'package:t_paris/data/services/api/transport_scheduling_api_service.dart';
-import 'package:t_paris/domain/dto/responses/siri_response.dart';
+import 'package:t_paris/domain/models/dto/responses/siri_response.dart';
 import 'package:t_paris/utils/data_state.dart';
 import '../../../domain/repositories/transport_scheduling_repository.dart';
 
