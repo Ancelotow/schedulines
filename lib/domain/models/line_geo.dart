@@ -19,7 +19,7 @@ class LineGeo {
       polylineId: PolylineId(line),
       color: color,
       points: coordinates,
-      width: 3,
+      width: 2,
     );
   }
 }
