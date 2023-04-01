@@ -6,11 +6,15 @@ import 'package:t_paris/domain/models/entities/stop.dart';
 import 'package:t_paris/ui/cubits/states/transport_stop_state.dart';
 import 'package:t_paris/ui/cubits/transport_stop_cubit.dart';
 import 'package:t_paris/ui/widgets/error.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:t_paris/ui/widgets/transport_avaible_displayer.dart';
 
 class LandingPageStopBloc extends StatelessWidget {
-  const LandingPageStopBloc({Key? key}) : super(key: key);
+  Stop? currentStop;
+
+  LandingPageStopBloc({
+    Key? key,
+    this.currentStop,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +28,10 @@ class LandingPageStopBloc extends StatelessWidget {
           case TransportStopStateError:
             return Center(child: WidgetError(exception: state.error!));
           case TransportStopStateSuccess:
-            return _getCard(state.data!.firstWhere((e) => e.idRef == "73798"));
+            if(currentStop != null) {
+              return _getCard(state.data!.firstWhere((e) => e.idRef == currentStop!.idRef));
+            }
+            return Container();
           default:
             return const SizedBox();
         }

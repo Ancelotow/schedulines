@@ -45,6 +45,4 @@ Future<void> initializeDependencies() async {
     TransportSchedulingApiRepository(locator<TransportSchedulingApiService>()),
   );
 
-
-
 }
