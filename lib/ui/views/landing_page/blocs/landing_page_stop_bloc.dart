@@ -28,11 +28,13 @@ class _LandingPageStopBlocState extends State<LandingPageStopBloc> {
   @override
   void initState() {
     super.initState();
-    _height = MediaQuery.of(context).size.height / 10;
   }
 
   @override
   Widget build(BuildContext context) {
+    if(!_isOpen) {
+      _height = MediaQuery.of(context).size.height / 10;
+    }
     final viewModel = BlocProvider.of<TransportStopCubit>(context);
     viewModel.getAllStops();
     return BlocBuilder<TransportStopCubit, TransportStopState>(

@@ -33,6 +33,7 @@ dependencies:
   awesome_dio_interceptor: ^1.0.0
   flutter_svg: ^2.0.4
   google_maps_flutter: ^2.2.5
+  collection: ^1.17.0
 
 dev_dependencies:
   flutter_test:
@@ -55,6 +56,7 @@ flutter:
 
   assets:
     - assets/geo/lines.geojson
+    - assets/json/lines.json
     - assets/json/stops.json
     - assets/icons/on_cancel.svg
     - assets/icons/on_late.svg

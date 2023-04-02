@@ -2,6 +2,7 @@ import 'arrival_status.dart';
 
 class StopScheduling {
   final String destination;
+  final String line;
   final String direction;
   final String transportRef;
   final String operatorRef;
@@ -10,6 +11,7 @@ class StopScheduling {
   final ArrivalStatus arrivalStatus;
 
   StopScheduling({
+    required this.line,
     required this.operatorRef,
     required this.destination,
     required this.direction,

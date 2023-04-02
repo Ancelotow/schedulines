@@ -1,7 +1,8 @@
+import 'package:t_paris/domain/models/entities/schedule.dart';
 import 'package:t_paris/domain/models/entities/stop_scheduling.dart';
 
 abstract class TransportSchedulingState {
-  final List<StopScheduling>? data;
+  final List<Schedule>? data;
   final Error? error;
 
   const TransportSchedulingState({
@@ -11,7 +12,7 @@ abstract class TransportSchedulingState {
 }
 
 class TransportSchedulingStateSuccess extends TransportSchedulingState {
-  const TransportSchedulingStateSuccess(List<StopScheduling> data) : super(data: data);
+  const TransportSchedulingStateSuccess(List<Schedule> data) : super(data: data);
 }
 
 class TransportSchedulingStateError<T> extends TransportSchedulingState {
