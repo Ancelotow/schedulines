@@ -1,0 +1,13 @@
+<svg id="metro_6_couleur_RVB" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="283.5" height="283.5" viewBox="0 0 283.5 283.5">
+	<defs>
+		<clipPath id="clip-path">
+			<rect id="Rectangle_6" data-name="Rectangle 6" width="283.5" height="283.5"/>
+		</clipPath>
+	</defs>
+	<g id="Groupe_17" data-name="Groupe 17" clip-path="url(#clip-path)">
+		<path id="Tracé_17" data-name="Tracé 17" d="M0,141.7A141.775,141.775,0,0,1,141.7,0C220,0,283.5,63.5,283.5,141.7A141.75,141.75,0,0,1,0,141.7" fill="#82dc73"/>
+	</g>
+	<g id="Groupe_18" data-name="Groupe 18" clip-path="url(#clip-path)">
+		<path id="Tracé_18" data-name="Tracé 18" d="M192.9,168.9c0-28.1-20-44.5-44.9-44.5-16.2,0-26,5.7-31.1,10.2,2.1-30.2,17.4-47,38.5-47,8.7,0,16.6,1.9,20.6,3.6l4.7-25.5a98.943,98.943,0,0,0-22.6-2.6c-48.1,0-72.6,37.5-72.6,89.6,0,39.8,14.7,68.3,55.7,68.3,31.7,0,51.7-22.1,51.7-52.1m-30.3,3.4c0,13-7.7,25.1-22.6,25.1-15.3,0-23.6-13.8-23.6-28.1,0-4.5,0-10.4,1.7-13,3-4.7,10.6-8.3,20.2-8.3,15,0,24.3,10.2,24.3,24.3" fill-rule="evenodd"/>
+	</g>
+</svg>

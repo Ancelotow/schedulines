@@ -1,66 +1,54 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:t_paris/config/routes/app_router.dart';
+import 'package:t_paris/domain/repositories/transport_line_repository.dart';
+import 'package:t_paris/domain/repositories/transport_scheduling_repository.dart';
+import 'package:t_paris/domain/repositories/transport_stop_repository.dart';
+import 'package:t_paris/ui/cubits/transport_map_cubit.dart';
+import 'package:t_paris/ui/cubits/transport_scheduling_cubit.dart';
+import 'package:t_paris/ui/cubits/transport_stop_cubit.dart';
+import 'config/themes/theme.dart';
+import 'domain/repositories/transport_map_repository.dart';
+import 'helpers/locator.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initializeDependencies();
   runApp(const MyApp());
 }
+
+final _appRouter = AppRouter();
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => TransportMapCubit(
+            locator<TransportMapRepository>(),
+          )..getLinesOnMaps(),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        BlocProvider(
+          create: (context) => TransportStopCubit(
+            locator<TransportStopRepository>(),
+          )..getAllStops(),
+        ),
+        BlocProvider(
+          create: (context) => TransportSchedulingCubit(
+              locator<TransportSchedulingRepository>(),
+              locator<TransportLineRepository>())
+            ..getSchedulingStop(),
+        ),
+      ],
+      child: MaterialApp.router(
+        title: "T-Paris",
+        debugShowCheckedModeBanner: false,
+        routerDelegate: _appRouter.delegate(),
+        routeInformationParser: _appRouter.defaultRouteParser(),
+        theme: AppTheme.get(context),
       ),
     );
   }

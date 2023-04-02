@@ -1,0 +1,16 @@
+<svg id="tram_T1_carto_RVB" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="311.8" height="311.8" viewBox="0 0 311.8 311.8">
+	<defs>
+		<clipPath id="clip-path">
+			<rect id="Rectangle_6" data-name="Rectangle 6" width="311.8" height="311.8"/>
+		</clipPath>
+	</defs>
+	<g id="Groupe_17" data-name="Groupe 17" clip-path="url(#clip-path)">
+		<path id="Tracé_19" data-name="Tracé 19" d="M28.3,311.8A28.338,28.338,0,0,1,0,283.5V28.3A28.338,28.338,0,0,1,28.3,0H283.4a28.338,28.338,0,0,1,28.3,28.3V283.4a28.338,28.338,0,0,1-28.3,28.3H28.3Z" fill="#fff"/>
+	</g>
+	<g id="Groupe_18" data-name="Groupe 18" clip-path="url(#clip-path)">
+		<path id="Tracé_20" data-name="Tracé 20" d="M129.2,122.3v89.6H105V122.3H71.5V102.7h91.3v19.6H129.2Zm87.9,89.6V126c-6.6,5.3-17.2,10.4-24.4,13.6l-7.4-16.7c11.4-4.8,25.2-12.1,36-20.3h19V211.8H217.1Z"/>
+	</g>
+	<g id="Groupe_19" data-name="Groupe 19" clip-path="url(#clip-path)">
+		<path id="Tracé_21" data-name="Tracé 21" d="M283.5,57.4H28.3A14.19,14.19,0,0,1,14.1,43.2V29.1A14.19,14.19,0,0,1,28.3,14.9H283.4a14.19,14.19,0,0,1,14.2,14.2V43.3a14.084,14.084,0,0,1-14.1,14.1m14.1,226.8V270a14.19,14.19,0,0,0-14.2-14.2H28.3A14.19,14.19,0,0,0,14.1,270v14.2a14.19,14.19,0,0,0,14.2,14.2H283.4a14.19,14.19,0,0,0,14.2-14.2" fill="#0055c8"/>
+	</g>
+</svg>

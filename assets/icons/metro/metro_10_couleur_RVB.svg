@@ -1,0 +1,13 @@
+<svg id="metro_10_couleur_RVB" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="283.5" height="283.5" viewBox="0 0 283.5 283.5">
+	<defs>
+		<clipPath id="clip-path">
+			<rect id="Rectangle_6" data-name="Rectangle 6" width="283.5" height="283.5"/>
+		</clipPath>
+	</defs>
+	<g id="Groupe_17" data-name="Groupe 17" clip-path="url(#clip-path)">
+		<path id="Tracé_17" data-name="Tracé 17" d="M0,141.7A141.711,141.711,0,0,1,141.7,0C220,0,283.5,63.5,283.5,141.7A141.75,141.75,0,0,1,0,141.7" fill="#dc9600"/>
+	</g>
+	<g id="Groupe_18" data-name="Groupe 18" clip-path="url(#clip-path)">
+		<path id="Tracé_18" data-name="Tracé 18" d="M81.7,216.9V98.8c-9.1,7.2-23.6,13.8-33.6,18.7l-10.2-23C53.7,88,72.6,78,87.5,66.7h26.2V216.9Zm162.8-75.3c0,34.7-9.8,79.4-55.1,79.4s-54.3-44.7-54.3-79.4,9.8-79.4,55.1-79.4,54.3,44.7,54.3,79.4m-32.6,0c0-15.7-.6-54-22.1-54-21.7,0-22.3,38.7-22.3,54,0,15.1,1.1,54.3,22.3,54.3s22.1-39.4,22.1-54.3"/>
+	</g>
+</svg>
