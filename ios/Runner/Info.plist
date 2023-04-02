@@ -47,5 +47,9 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSLocationUsageDescription</key>
+    <string>Afficher les stations à proximité (disponible dans une prochaine mise-à-jour)</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Afficher les stations à proximité (disponible dans une prochaine mise-à-jour)</string>
 </dict>
 </plist>
