@@ -54,6 +54,10 @@ class LandingPageSearchfieldBloc extends StatelessWidget {
         ),
         focusNode: focusNode,
         decoration: InputDecoration(
+          hintText: "Saisissez votre station...",
+          hintStyle: const TextStyle(
+            color: Colors.grey
+          ),
           suffixIcon: IconButton(
             onPressed: textEditiginController.clear,
             icon: const Icon(
