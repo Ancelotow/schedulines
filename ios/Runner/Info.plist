@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>T Paris</string>
+	<string>T-Paris</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -48,8 +48,8 @@
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>NSLocationUsageDescription</key>
-    <string>Afficher les stations à proximité (disponible dans une prochaine mise-à-jour)</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Afficher les stations à proximité (disponible dans une prochaine mise-à-jour)</string>
+	<string>Afficher les stations à proximité (disponible dans une prochaine mise-à-jour)</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Afficher les stations à proximité (disponible dans une prochaine mise-à-jour)</string>
 </dict>
 </plist>
