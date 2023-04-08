@@ -53,6 +53,19 @@ class LandingPageSearchfieldBloc extends StatelessWidget {
           color: Colors.white,
         ),
         focusNode: focusNode,
+        decoration: InputDecoration(
+          hintText: "Saisissez votre station...",
+          hintStyle: const TextStyle(
+            color: Colors.grey
+          ),
+          suffixIcon: IconButton(
+            onPressed: textEditiginController.clear,
+            icon: const Icon(
+              Icons.clear_sharp,
+              size: 13,
+            ),
+          ),
+        ),
         controller: textEditiginController,
       ),
       optionsBuilder: (textEditingValue) {
@@ -73,7 +86,10 @@ class LandingPageSearchfieldBloc extends StatelessWidget {
             itemCount: options.length,
             itemBuilder: (context, index) {
               return GestureDetector(
-                onTap: () => onSelected.call(options.elementAt(index)),
+                onTap: () {
+                  onSelected.call(options.elementAt(index));
+                  FocusManager.instance.primaryFocus?.unfocus();
+                },
                 child: Container(
                   color: Theme.of(context).primaryColor,
                   child: Padding(
