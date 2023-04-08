@@ -73,7 +73,10 @@ class LandingPageSearchfieldBloc extends StatelessWidget {
             itemCount: options.length,
             itemBuilder: (context, index) {
               return GestureDetector(
-                onTap: () => onSelected.call(options.elementAt(index)),
+                onTap: () {
+                  onSelected.call(options.elementAt(index));
+                  FocusManager.instance.primaryFocus?.unfocus();
+                },
                 child: Container(
                   color: Theme.of(context).primaryColor,
                   child: Padding(
