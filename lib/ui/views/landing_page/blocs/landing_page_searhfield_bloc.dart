@@ -53,6 +53,15 @@ class LandingPageSearchfieldBloc extends StatelessWidget {
           color: Colors.white,
         ),
         focusNode: focusNode,
+        decoration: InputDecoration(
+          suffixIcon: IconButton(
+            onPressed: textEditiginController.clear,
+            icon: const Icon(
+              Icons.clear_sharp,
+              size: 13,
+            ),
+          ),
+        ),
         controller: textEditiginController,
       ),
       optionsBuilder: (textEditingValue) {
