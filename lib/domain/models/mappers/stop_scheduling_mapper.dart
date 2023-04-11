@@ -1,6 +1,6 @@
 import 'package:t_paris/domain/models/dto/responses/siri_response.dart';
 import 'package:t_paris/domain/models/entities/stop_scheduling.dart';
-import 'package:t_paris/domain/models/mappers/arrival_status_mapper.dart';
+import 'package:t_paris/domain/models/mappers/departure_status_mapper.dart';
 
 abstract class StopSchedulingMapper {
   static List<StopScheduling> fromSiriResponse(SiriResponse response) {
@@ -21,7 +21,7 @@ abstract class StopSchedulingMapper {
             : vehicleJourney.vehiclesJourneyNames.first,
         arrivalAt: vehicleJourney.monitoredCall.expectedArrivalTime,
         departureAt: vehicleJourney.monitoredCall.expectedDepartureTime,
-        arrivalStatus: ArrivalStatusMapper.fromString(
+        departureStatus: DepartureStatusMapper.fromString(
             vehicleJourney.monitoredCall.arrivalStatus),
       ));
     }

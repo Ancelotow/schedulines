@@ -7,7 +7,7 @@ class ScheduleMapper {
   static List<Schedule> fromStopsAndLines(
       List<StopScheduling> stopsSchedules, List<Line> lines) {
     final schedules = <Schedule>[];
-    final results = groupBy(stopsSchedules, (e) => "${e.direction}#${e.line}");
+    final results = groupBy(stopsSchedules, (e) => "${e.direction.isEmpty ? e.destination : e.direction}#${e.line}");
     for (var key in results.keys) {
       final direction = key.split('#')[0];
       final lineRef = key.split('#')[1];
