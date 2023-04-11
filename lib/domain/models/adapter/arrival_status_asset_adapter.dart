@@ -1,13 +1,13 @@
-import 'package:t_paris/domain/models/entities/arrival_status.dart';
+import 'package:t_paris/domain/models/entities/departure_status.dart';
 
 class ArrivalStatusAssetAdapter {
 
-  static String fromArrivalStatus(ArrivalStatus status) {
+  static String fromArrivalStatus(DepartureStatus status) {
     switch(status) {
-      case ArrivalStatus.cancel:
+      case DepartureStatus.cancel:
         return "assets/icons/on_cancel.svg";
 
-      case ArrivalStatus.onLate:
+      case DepartureStatus.onLate:
         return "assets/icons/on_late.svg";
 
       default:

@@ -140,7 +140,7 @@ class LanfingPageScheduleBloc extends StatelessWidget {
     return Row(
       children: [
         SvgPicture.asset(
-          ArrivalStatusAssetAdapter.fromArrivalStatus(stopScheduling.arrivalStatus),
+          ArrivalStatusAssetAdapter.fromArrivalStatus(stopScheduling.departureStatus),
           width: 10,
         ),
         const SizedBox(width: 5),

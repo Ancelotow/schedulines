@@ -1,4 +1,4 @@
-import 'arrival_status.dart';
+import 'departure_status.dart';
 
 class StopScheduling {
   final String destination;
@@ -8,7 +8,7 @@ class StopScheduling {
   final String operatorRef;
   final DateTime? arrivalAt;
   final DateTime departureAt;
-  final ArrivalStatus arrivalStatus;
+  final DepartureStatus departureStatus;
 
   StopScheduling({
     required this.line,
@@ -18,7 +18,7 @@ class StopScheduling {
     required this.transportRef,
     required this.arrivalAt,
     required this.departureAt,
-    required this.arrivalStatus
+    required this.departureStatus
   });
 
   int arrivedIn(DateTime date) {
