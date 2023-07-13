@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
 
-import '../../dto/responses/geojson.dart';
+import '../../dto/responses/geojson/geojson.dart';
 
 class TransportMapLocalService {
 

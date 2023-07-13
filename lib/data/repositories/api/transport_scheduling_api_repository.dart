@@ -1,31 +1,22 @@
-import 'dart:io' show HttpStatus;
-import 'package:dio/dio.dart';
 import 'package:t_paris/data/services/api/transport_scheduling_api_service.dart';
-import 'package:t_paris/utils/data_state.dart';
-import '../../../domain/repositories/transport_scheduling_repository.dart';
-import '../../dto/responses/siri_response.dart';
+import '../../../domain/models/entities/line.dart';
+import '../../../domain/models/entities/schedule.dart';
+import '../../../domain/models/mappers/schedule_mapper.dart';
+import '../../../domain/models/mappers/stop_scheduling_mapper.dart';
+import '../../../domain/repositories/scheduling_repository.dart';
 
-class TransportSchedulingApiRepository implements TransportSchedulingRepository {
+class TransportSchedulingApiRepository implements SchedulingRepository {
   final TransportSchedulingApiService _service;
 
   TransportSchedulingApiRepository(this._service);
 
   @override
-  Future<DataState<SiriResponse>> getStopScheduling({
+  Future<List<Schedule>> getStopScheduling({
     required String monitoringRef,
+    required List<Line> lines,
   }) async {
-    try{
-      final httpResponse = await _service.getStopScheduling(monitoringRef);
-      if(httpResponse.response.statusCode == HttpStatus.ok) {
-        return DataStateSuccess(httpResponse.data);
-      } else {
-        throw DioError(
-          response: httpResponse.response,
-          requestOptions: httpResponse.response.requestOptions,
-        );
-      }
-    } on DioError catch(e) {
-      return DataStateError(e);
-    }
+    final response = await _service.getStopScheduling(monitoringRef);
+    final stops = StopSchedulingMapper.fromSiriResponse(response);
+    return ScheduleMapper.fromStopsAndLines(stops, lines);
   }
 }

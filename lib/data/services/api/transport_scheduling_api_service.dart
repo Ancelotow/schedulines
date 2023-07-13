@@ -1,18 +1,23 @@
-import 'package:dio/dio.dart' hide Headers;
-import 'package:retrofit/retrofit.dart';
+import 'package:dio/dio.dart';
+import 'package:flutter/cupertino.dart';
+
 import '../../dto/responses/siri_response.dart';
-part 'transport_scheduling_api_service.g.dart';
+import '../scheduling_service.dart';
 
-@RestApi(baseUrl: "https://prim.iledefrance-mobilites.fr/marketplace")
-abstract class TransportSchedulingApiService {
+class TransportSchedulingApiService implements SchedulingService {
+  final Dio _dio;
 
-  factory TransportSchedulingApiService (Dio dio, {String baseUrl}) = _TransportSchedulingApiService;
+  TransportSchedulingApiService(this._dio);
 
-  @GET("/stop-monitoring")
-  @Headers(<String, dynamic>{
-    "apiKey" : "pjB7qiNhlBHc6RHsozpGdeUN1TjjU4db"
-  })
-  Future<HttpResponse<SiriResponse>> getStopScheduling(
-    @Query("MonitoringRef") String monitoringRef
-  );
+  @override
+  Future<SiriResponse> getStopScheduling(String monitoringRef) async {
+    final params = {
+      "MonitoringRef": monitoringRef,
+    };
+    final httpResponse = await _dio.get(
+        "/stop-monitoring",
+        queryParameters: params,
+    );
+    return SiriResponse.fromJson(httpResponse.data);
+  }
 }

@@ -5,7 +5,7 @@ import 'package:t_paris/domain/extensions/hex_color.dart';
 import 'package:t_paris/domain/models/entities/stop.dart';
 import 'package:t_paris/ui/cubits/states/transport_stop_state.dart';
 import 'package:t_paris/ui/cubits/transport_stop_cubit.dart';
-import 'package:t_paris/ui/views/landing_page/blocs/landing_page_schedule_bloc.dart';
+import 'package:t_paris/ui/views/schedule_view.dart';
 import 'package:t_paris/ui/widgets/error.dart';
 import 'package:t_paris/ui/widgets/transport_avaible_displayer.dart';
 
@@ -108,7 +108,7 @@ class _LandingPageStopBlocState extends State<LandingPageStopBloc> {
 
   Widget? _getSchedule(BuildContext context) {
     if(_isOpen && widget.currentStop != null) {
-      return LanfingPageScheduleBloc(stop: widget.currentStop!);
+      return ScheduleView(stop: widget.currentStop!);
     }
     return null;
   }

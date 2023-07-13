@@ -8,36 +8,34 @@ import 'package:t_paris/domain/models/adapter/arrival_status_asset_adapter.dart'
 import 'package:t_paris/domain/models/entities/schedule.dart';
 import 'package:t_paris/domain/models/entities/stop.dart';
 import 'package:t_paris/domain/models/entities/stop_scheduling.dart';
-import 'package:t_paris/ui/cubits/states/transport_scheduling_state.dart';
-import 'package:t_paris/ui/cubits/transport_scheduling_cubit.dart';
-import 'package:t_paris/ui/widgets/error.dart';
+import 'package:t_paris/ui/logic/scheduling/scheduling_bloc.dart';
 
-class LanfingPageScheduleBloc extends StatelessWidget {
+class ScheduleView extends StatelessWidget {
   final Stop stop;
 
-  const LanfingPageScheduleBloc({
+  const ScheduleView({
     Key? key,
     required this.stop,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final viewModel = BlocProvider.of<TransportSchedulingCubit>(context);
-    Timer.periodic(
-        const Duration(minutes: 60), (timer) => viewModel.getSchedulingStop());
-    viewModel.monitoringRef = "STIF:StopPoint:Q:${stop.idRef}:";
-    viewModel.getSchedulingStop();
-    return BlocBuilder<TransportSchedulingCubit, TransportSchedulingState>(
+    _getSchedulingStop(context);
+    return BlocBuilder<SchedulingBloc, SchedulingState>(
       builder: (_, state) {
-        switch (state.runtimeType) {
-          case TransportSchedulingStateLoading:
+        switch (state.status) {
+          case SchedulingStatus.loading:
             return const Center(child: CupertinoActivityIndicator());
-          case TransportSchedulingStateError:
-            return Center(child: WidgetError(exception: state.error!));
-          case TransportSchedulingStateSuccess:
-            return _getSchedules(context, state.data!);
+          case SchedulingStatus.error:
+            return const Center(
+              child: Icon(
+                Icons.error,
+                color: Colors.red,
+                size: 30,
+              ),
+            );
           default:
-            return const SizedBox();
+            return _getSchedules(context, state.schedules);
         }
       },
     );
@@ -108,9 +106,11 @@ class LanfingPageScheduleBloc extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              _getScheduleInformation(destination.elementAtOrNull(0)),
+                              _getScheduleInformation(
+                                  destination.elementAtOrNull(0)),
                               const SizedBox(width: 15),
-                              _getScheduleInformation(destination.elementAtOrNull(1)),
+                              _getScheduleInformation(
+                                  destination.elementAtOrNull(1)),
                             ],
                           ),
                         ],
@@ -140,7 +140,8 @@ class LanfingPageScheduleBloc extends StatelessWidget {
     return Row(
       children: [
         SvgPicture.asset(
-          ArrivalStatusAssetAdapter.fromArrivalStatus(stopScheduling.departureStatus),
+          ArrivalStatusAssetAdapter.fromArrivalStatus(
+              stopScheduling.departureStatus),
           width: 10,
         ),
         const SizedBox(width: 5),
@@ -154,5 +155,10 @@ class LanfingPageScheduleBloc extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  void _getSchedulingStop(BuildContext context) {
+    final bloc = BlocProvider.of<SchedulingBloc>(context);
+    bloc.add(SchedulingEventFetch("STIF:StopPoint:Q:${stop.idRef}:"));
   }
 }

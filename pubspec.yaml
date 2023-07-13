@@ -34,6 +34,8 @@ dependencies:
   flutter_svg: ^2.0.4
   google_maps_flutter: ^2.2.5
   collection: ^1.17.0
+  flutter_dotenv: ^5.1.0
+
 
 dev_dependencies:
   flutter_test:
@@ -55,6 +57,10 @@ flutter:
   #        style: italic
 
   assets:
+    # Environment
+    - lib/.env
+
+    # Symbol
     - assets/geo/lines.geojson
     - assets/json/lines.json
     - assets/json/stops.json
@@ -66,11 +72,15 @@ flutter:
     - assets/icons/symbole_RER.svg
     - assets/icons/symbole_train.svg
     - assets/icons/symbole_tram.svg
+
+    # Icon RER
     - assets/icons/rer/RER_A_couleur_RVB.svg
     - assets/icons/rer/RER_B_couleur_RVB.svg
     - assets/icons/rer/RER_C_couleur_RVB.svg
     - assets/icons/rer/RER_D_couleur_RVB.svg
     - assets/icons/rer/RER_E_couleur_RVB.svg
+
+    # Icon Train
     - assets/icons/train/train_H_couleur_RVB.svg
     - assets/icons/train/train_J_couleur_RVB.svg
     - assets/icons/train/train_K_couleur_RVB.svg
@@ -79,6 +89,8 @@ flutter:
     - assets/icons/train/train_P_couleur_RVB.svg
     - assets/icons/train/train_R_couleur_RVB.svg
     - assets/icons/train/train_U_couleur_RVB.svg
+
+    #Icon Tram
     - assets/icons/tram/tram_T1_carto_RVB.svg
     - assets/icons/tram/tram_T2_carto_RVB.svg
     - assets/icons/tram/tram_T3a_carto_RVB.svg
@@ -93,6 +105,8 @@ flutter:
     - assets/icons/tram/tram_T11_carto_RVB.svg
     - assets/icons/tram/tram_T12_carto_RVB.svg
     - assets/icons/tram/tram_T13_carto_RVB.svg
+
+    # Icon Métro
     - assets/icons/metro/metro_1_couleur_RVB.svg
     - assets/icons/metro/metro_2_couleur_RVB.svg
     - assets/icons/metro/metro_3_couleur_RVB.svg
