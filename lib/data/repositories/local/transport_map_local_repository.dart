@@ -1,7 +1,7 @@
 import 'package:t_paris/data/services/local/transport_map_local_service.dart';
-import 'package:t_paris/domain/models/dto/responses/geojson.dart';
 import 'package:t_paris/utils/data_state.dart';
 import '../../../domain/repositories/transport_map_repository.dart';
+import '../../dto/responses/geojson.dart';
 
 class TransportMapLocalRepository implements TransportMapRepository {
 

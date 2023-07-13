@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:t_paris/domain/models/dto/responses/dataset_stop_response.dart';
+
+import '../../dto/responses/dataset_stop_response.dart';
 
 class TransportStopLocalService {
 

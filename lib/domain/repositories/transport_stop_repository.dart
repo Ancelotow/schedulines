@@ -1,5 +1,5 @@
-import 'package:t_paris/domain/models/dto/responses/dataset_stop_response.dart';
 import 'package:t_paris/utils/data_state.dart';
+import '../../data/dto/responses/dataset_stop_response.dart';
 
 abstract class TransportStopRepository {
 

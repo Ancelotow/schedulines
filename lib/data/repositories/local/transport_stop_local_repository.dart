@@ -1,7 +1,7 @@
 import 'package:t_paris/data/services/local/transport_stop_local_service.dart';
-import 'package:t_paris/domain/models/dto/responses/dataset_stop_response.dart';
 import 'package:t_paris/domain/repositories/transport_stop_repository.dart';
 import 'package:t_paris/utils/data_state.dart';
+import '../../dto/responses/dataset_stop_response.dart';
 
 class TransportStopLocalRepository implements TransportStopRepository {
 

@@ -1,4 +1,4 @@
-import 'package:t_paris/domain/models/dto/responses/stop_response.dart';
+import 'package:t_paris/data/dto/responses/stop_response.dart';
 
 class DatasetStopResponse {
   final String recordId;

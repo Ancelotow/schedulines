@@ -1,7 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
-import 'package:t_paris/domain/models/dto/responses/dataset_lines_response.dart';
+
+import '../../dto/responses/dataset_lines_response.dart';
 
 class TransportLineLocalService {
 

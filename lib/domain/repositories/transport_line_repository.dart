@@ -1,5 +1,5 @@
-import 'package:t_paris/domain/models/dto/responses/dataset_lines_response.dart';
 import 'package:t_paris/utils/data_state.dart';
+import '../../data/dto/responses/dataset_lines_response.dart';
 
 abstract class TransportLineRepository {
 

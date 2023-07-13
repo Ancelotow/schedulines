@@ -1,4 +1,4 @@
-import 'package:t_paris/domain/models/dto/responses/line_response.dart';
+import 'line_response.dart';
 
 class DatasetLinesResponse {
   final String recordId;
