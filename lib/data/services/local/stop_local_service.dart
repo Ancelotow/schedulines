@@ -1,0 +1,19 @@
+import 'dart:convert';
+import 'package:flutter/services.dart';
+import '../../dto/responses/dataset_stop_response.dart';
+import '../stop_service.dart';
+
+class StopLocalService implements StopService {
+
+  @override
+  Future<List<DatasetStopResponse>> getStops() async {
+    final result = await rootBundle.loadString('assets/json/stops.json');
+    final data = json.decode(result) as List<dynamic>;
+    final stops = <DatasetStopResponse>[];
+    for(var dataset in data) {
+      stops.add(DatasetStopResponse.fromJson(dataset));
+    }
+    return  stops;
+  }
+
+}

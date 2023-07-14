@@ -1,6 +1,6 @@
-import 'package:t_paris/domain/models/dto/responses/siri_response.dart';
 import 'package:t_paris/domain/models/entities/stop_scheduling.dart';
 import 'package:t_paris/domain/models/mappers/departure_status_mapper.dart';
+import '../../../data/dto/responses/siri_response.dart';
 
 abstract class StopSchedulingMapper {
   static List<StopScheduling> fromSiriResponse(SiriResponse response) {

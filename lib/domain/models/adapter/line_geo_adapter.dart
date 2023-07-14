@@ -1,7 +1,7 @@
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:t_paris/domain/extensions/hex_color.dart';
-import 'package:t_paris/domain/models/dto/responses/geojson_feature.dart';
 import 'package:t_paris/domain/models/entities/line_geo.dart';
+import '../../../data/dto/responses/geojson/geojson_feature.dart';
 
 
 class LineGeoAdapter {
