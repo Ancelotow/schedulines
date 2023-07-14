@@ -1,11 +1,12 @@
-import 'package:t_paris/data/services/local/transport_line_local_service.dart';
+import 'package:t_paris/data/services/line_service.dart';
+import 'package:t_paris/data/services/local/line_local_service.dart';
 import 'package:t_paris/domain/repositories/line_repository.dart';
 import '../../../domain/models/entities/line.dart';
 import '../../../domain/models/mappers/line_mapper.dart';
 
 class LineLocalRepository implements LineRepository {
 
-  final TransportLineLocalService _service;
+  final LineService _service;
 
   LineLocalRepository(this._service);
 

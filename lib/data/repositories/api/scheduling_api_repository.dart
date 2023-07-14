@@ -3,10 +3,10 @@ import '../../../domain/models/entities/schedule.dart';
 import '../../../domain/models/mappers/schedule_mapper.dart';
 import '../../../domain/models/mappers/stop_scheduling_mapper.dart';
 import '../../../domain/repositories/scheduling_repository.dart';
-import '../../services/api/scheduling_api_service.dart';
+import '../../services/scheduling_service.dart';
 
 class SchedulingApiRepository implements SchedulingRepository {
-  final SchedulingApiService _service;
+  final SchedulingService _service;
 
   SchedulingApiRepository(this._service);
 

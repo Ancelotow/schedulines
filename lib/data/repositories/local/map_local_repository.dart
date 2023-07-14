@@ -1,11 +1,12 @@
-import 'package:t_paris/data/services/local/transport_map_local_service.dart';
+import 'package:t_paris/data/services/local/map_local_service.dart';
+import 'package:t_paris/data/services/map_service.dart';
 import 'package:t_paris/domain/models/entities/line_geo.dart';
 import '../../../domain/models/adapter/line_geo_adapter.dart';
 import '../../../domain/repositories/map_repository.dart';
 
 class MapLocalRepository implements MapRepository {
 
-  final TransportMapLocalService _service;
+  final MapService _service;
 
   MapLocalRepository(this._service);
 
