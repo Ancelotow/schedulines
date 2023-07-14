@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:t_paris/domain/models/entities/stop.dart';
 import 'package:t_paris/domain/notifications/StopSelectedNotification.dart';
-import 'package:t_paris/ui/views/landing_page/blocs/landing_page_map_bloc.dart';
-import 'package:t_paris/ui/views/landing_page/blocs/landing_page_searhfield_bloc.dart';
-import 'package:t_paris/ui/views/landing_page/blocs/landing_page_stop_bloc.dart';
+import 'package:t_paris/ui/views/map_view.dart';
+import 'package:t_paris/ui/views/searchfield_view.dart';
+import 'package:t_paris/ui/views/stop_view.dart';
 
 class TransportSchedulingPage extends StatefulWidget {
   const TransportSchedulingPage({Key? key}) : super(key: key);
@@ -26,7 +26,7 @@ class _TransportSchedulingPageState extends State<TransportSchedulingPage> {
       body: Stack(
         alignment: AlignmentDirectional.centerEnd,
         children: [
-          LandingPageMapBloc(
+          MapView(
               onMapCreated: (controller) => _mapController = controller
           ),
           Positioned(
@@ -44,7 +44,7 @@ class _TransportSchedulingPageState extends State<TransportSchedulingPage> {
                   }
                   return true;
                 },
-                child: LandingPageSearchfieldBloc(currentStop: _stop),
+                child: SearchFieldView(currentStop: _stop),
               ),
             ),
           ),
@@ -52,7 +52,7 @@ class _TransportSchedulingPageState extends State<TransportSchedulingPage> {
             bottom: 0,
             left: 0,
             right: 0,
-            child: LandingPageStopBloc(currentStop: _stop),
+            child: StopView(currentStop: _stop),
           ),
         ],
       ),
