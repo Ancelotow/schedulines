@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Android%20|%20iOS-lightgrey.svg)](#)
-[![Language](https://img.shields.io/badge/Language-Kotlin%20%7C%20Swift-orange.svg)](#)
+[![Language](https://img.shields.io/badge/Language-Flutter-blue.svg)](#)
 
 Schedulines is a mobile application providing **real-time metro and RER schedules** in Île-de-France (IDF), available on **Android** and **iOS**.
 
