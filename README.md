@@ -13,6 +13,14 @@ Schedulines is a mobile application providing **real-time metro and RER schedule
 
 ---
 
+## 🖼️ Screenshots
+<p float="left">
+  <img src="map.png" width="200" />
+  <img src="schedules.jpg" width="200" />
+</p>
+
+---
+
 ## 💻 Installation
 
 ### Android
@@ -37,6 +45,8 @@ Schedulines is a mobile application providing **real-time metro and RER schedule
 - Android Studio or Xcode.
 - iOS 15+ or Android 8+.
 - Internet connection for real-time schedules.
+
+---
 
 ## 🚀 Usage
 1. Open the app.
