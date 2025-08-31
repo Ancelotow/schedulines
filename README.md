@@ -41,12 +41,12 @@ Schedulines is a mobile application providing **real-time metro and RER schedule
 3. Build and run the app on a simulator or physical device.
 4. Ensure you have a valid Apple Developer account for signing.
 
-### ⚙️ Requirements
+---
+
+## ⚙️ Requirements
 - Android Studio or Xcode.
 - iOS 15+ or Android 8+.
 - Internet connection for real-time schedules.
-
----
 
 ## 🚀 Usage
 1. Open the app.
